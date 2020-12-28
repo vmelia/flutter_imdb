@@ -27,8 +27,7 @@ class MovieList extends StatelessWidget {
             title: Text(movie.title),
             subtitle: Text(movie.year),
             onTap: () {
-              if (movie.poster != null)
-                Navigator.pushNamed(context, MoviePage.route, arguments: movie);
+              Navigator.pushNamed(context, MoviePage.route, arguments: movie);
             });
       },
     );

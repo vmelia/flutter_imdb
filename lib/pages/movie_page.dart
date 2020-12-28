@@ -13,13 +13,6 @@ class MoviePage extends StatefulWidget {
 
 class _MoviePageState extends State<MoviePage> {
   @override
-  void initState() {
-    super.initState();
-    // you can uncomment this to get all batman movies when the page is loaded
-    //Provider.of<MovieListViewModel>(context, listen: false).fetchMovies("batman");
-  }
-
-  @override
   Widget build(BuildContext context) {
     return FlatButton(
         autofocus: true,
