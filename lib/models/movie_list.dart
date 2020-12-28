@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_imdb/pages/movie_page.dart';
 import 'package:flutter_imdb/view_models/movie_view_model.dart';
 
 class MovieList extends StatelessWidget {
@@ -14,18 +15,21 @@ class MovieList extends StatelessWidget {
         final movie = this.movies[index];
 
         return ListTile(
-          contentPadding: EdgeInsets.all(10),
-          leading: Container(
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    fit: BoxFit.cover, image: NetworkImage(movie.poster)),
-                borderRadius: BorderRadius.circular(6)),
-            width: 50,
-            height: 100,
-          ),
-          title: Text(movie.title),
-          subtitle: Text(movie.year),
-        );
+            contentPadding: EdgeInsets.all(10),
+            leading: Container(
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      fit: BoxFit.cover, image: NetworkImage(movie.poster)),
+                  borderRadius: BorderRadius.circular(6)),
+              width: 50,
+              height: 100,
+            ),
+            title: Text(movie.title),
+            subtitle: Text(movie.year),
+            onTap: () {
+              if (movie.poster != null)
+                Navigator.pushNamed(context, MoviePage.route, arguments: movie);
+            });
       },
     );
   }
