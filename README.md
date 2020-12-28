@@ -1,6 +1,8 @@
 # flutter_imdb
 
-Based on https://github.com/azamsharp/Movies-App-Flutter-MVVM
+Based on:
+https://github.com/azamsharp/Movies-App-Flutter-MVVM
+https://www.youtube.com/watch?v=UT7RqvtyXLI
 
 ## IMDB
 
